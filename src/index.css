@@ -19,5 +19,5 @@ code {
 
 #job-list-container {
   overflow-y: auto;
-  max-height: 950px; 
+  max-height: 950px; /* Ensure the container can scroll */
 }

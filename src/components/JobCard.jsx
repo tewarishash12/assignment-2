@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBookmark } from 'react-icons/fa'; // Import the bookmark icon
+import { FaBookmark } from 'react-icons/fa';
 
 const JobCard = ({ jobRole, workType, salary, companyIcon, companyName, location }) => {
     return (
