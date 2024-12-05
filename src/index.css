@@ -16,3 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#job-list-container {
+  overflow-y: auto;
+  max-height: 950px; 
+}
