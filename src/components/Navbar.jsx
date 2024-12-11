@@ -8,8 +8,13 @@ const Navbar = () => {
     const { darkMode, setDarkMode } = useDarkMode();
 
     function toggleDarkMode() {
-        setDarkMode(!darkMode);
+        setDarkMode((prevMode) => {
+            const newMode = !prevMode;
+            localStorage.setItem('darkMode', JSON.stringify(newMode));
+            return newMode;
+        });
     }
+    
 
     return (
         <nav className={`flex justify-between items-center border-b-2 h-[88px] max-w-[1920px] w-full mx-auto px-16 
