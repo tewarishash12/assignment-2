@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import jobsData from './jobData';
 import JobCard from './JobCard';
+import { useJobData } from '../Context/JobData';
+import { useDarkMode } from '../Context/DarkMode';
 
 const JobList = () => {
     const [visibleJobs, setVisibleJobs] = useState(12);
+    const { jobsData } = useJobData();
+    const { darkMode } = useDarkMode();
 
     const handleInfiniteScroll = () => {
-        console.log("scrollHeight", document.documentElement.scrollHeight); // 879
-        console.log("innerHeight", window.innerHeight); //319
-        console.log("scrollTop", document.documentElement.scrollTop); //490
-        if (window.innerHeight + document.documentElement.scrollTop + 1 > document.documentElement.scrollHeight) {
+        if (window.innerHeight + document.documentElement.scrollTop + 1 > document.documentElement.scrollHeight)
             setVisibleJobs(prevJobs => prevJobs + 12);
-        }
     }
 
     useEffect(() => {
@@ -25,8 +24,8 @@ const JobList = () => {
     return (
         <div
             id="job-list-container"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 overflow-y-auto"
-            style={{ maxHeight: '950px' }} 
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 overflow-y-auto ${darkMode ? 'bg-gray-700' : 'bg-white'}`}
+            style={{ maxHeight: '950px' }}
         >
             {jobsData.slice(0, visibleJobs).map((job, index) => (
                 <JobCard
@@ -37,6 +36,7 @@ const JobList = () => {
                     companyIcon={job.companyIcon}
                     companyName={job.companyName}
                     location={job.location}
+                    jobId={job.Id}
                 />
             ))}
         </div>

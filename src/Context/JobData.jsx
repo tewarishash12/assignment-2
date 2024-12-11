@@ -1,5 +1,14 @@
-const jobsData = [
+import { useContext, createContext, useState } from "react";
+
+const JobData = createContext({});
+
+export function useJobData(){
+    return useContext(JobData);
+}
+
+export const jobsData = [
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -8,6 +17,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -16,6 +26,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -24,6 +35,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -32,6 +44,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -40,6 +53,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -48,6 +62,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -56,6 +71,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -64,6 +80,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -72,6 +89,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -80,6 +98,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -88,6 +107,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -96,6 +116,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -104,6 +125,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -112,6 +134,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -120,6 +143,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -128,6 +152,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -136,6 +161,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -144,6 +170,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -152,6 +179,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -160,6 +188,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -168,6 +197,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -176,6 +206,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -184,6 +215,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -192,6 +224,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -200,6 +233,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -208,6 +242,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -216,6 +251,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -224,6 +260,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -232,6 +269,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -240,6 +278,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -248,6 +287,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -256,6 +296,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -264,6 +305,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -272,6 +314,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -280,6 +323,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -288,6 +332,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -296,6 +341,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -304,6 +350,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -312,6 +359,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -320,6 +368,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -328,6 +377,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -336,6 +386,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -344,6 +395,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -352,6 +404,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -360,6 +413,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -368,6 +422,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -376,6 +431,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -384,6 +440,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -392,6 +449,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -400,6 +458,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -408,6 +467,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -416,6 +476,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -424,6 +485,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -432,6 +494,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -440,6 +503,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -448,6 +512,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -456,6 +521,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -464,6 +530,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -472,6 +539,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -480,6 +548,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -488,6 +557,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -496,6 +566,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -504,6 +575,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -512,6 +584,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -520,6 +593,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -528,6 +602,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -536,6 +611,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -544,6 +620,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -552,6 +629,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -560,6 +638,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -568,6 +647,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -576,6 +656,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -584,6 +665,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -592,6 +674,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -600,6 +683,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -608,6 +692,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -616,6 +701,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -624,6 +710,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -632,6 +719,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -640,6 +728,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -648,6 +737,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -656,6 +746,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -664,6 +755,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -672,6 +764,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -680,6 +773,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -688,6 +782,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -696,6 +791,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -704,6 +800,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -712,6 +809,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -720,6 +818,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -728,6 +827,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -736,6 +836,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -744,6 +845,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -752,6 +854,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -760,6 +863,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -768,6 +872,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -776,6 +881,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -784,6 +890,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -792,6 +899,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -800,6 +908,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -808,6 +917,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -816,6 +926,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -824,6 +935,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -832,6 +944,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -840,6 +953,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -848,6 +962,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -856,6 +971,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -864,6 +980,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -872,6 +989,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -880,6 +998,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -888,6 +1007,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -896,6 +1016,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -904,6 +1025,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -912,6 +1034,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -920,6 +1043,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -928,6 +1052,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -936,6 +1061,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -944,6 +1070,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -952,6 +1079,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -960,6 +1088,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -968,6 +1097,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -976,6 +1106,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -984,6 +1115,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -992,6 +1124,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -1000,6 +1133,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -1008,6 +1142,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -1016,6 +1151,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -1024,6 +1160,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -1032,6 +1169,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -1040,6 +1178,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -1048,6 +1187,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -1056,6 +1196,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -1064,6 +1205,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -1072,6 +1214,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -1080,6 +1223,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -1088,6 +1232,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -1096,6 +1241,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -1104,6 +1250,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -1112,6 +1259,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -1120,6 +1268,7 @@ const jobsData = [
         location: "Noida, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Software Engineer",
         workType: "Remote",
         salary: "₹10,00,000 - ₹15,00,000",
@@ -1128,6 +1277,7 @@ const jobsData = [
         location: "Bangalore, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Product Manager",
         workType: "Onsite",
         salary: "₹20,00,000 - ₹25,00,000",
@@ -1136,6 +1286,7 @@ const jobsData = [
         location: "Mumbai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Data Scientist",
         workType: "Hybrid",
         salary: "₹18,00,000 - ₹22,00,000",
@@ -1144,6 +1295,7 @@ const jobsData = [
         location: "London, UK", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "UI/UX Designer",
         workType: "Remote",
         salary: "₹8,00,000 - ₹12,00,000",
@@ -1152,6 +1304,7 @@ const jobsData = [
         location: "Hyderabad, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Marketing Specialist",
         workType: "Onsite",
         salary: "₹6,00,000 - ₹9,00,000",
@@ -1160,6 +1313,7 @@ const jobsData = [
         location: "Delhi, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Full-Stack Developer",
         workType: "Remote",
         salary: "₹12,00,000 - ₹18,00,000",
@@ -1168,6 +1322,7 @@ const jobsData = [
         location: "Chennai, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "DevOps Engineer",
         workType: "Hybrid",
         salary: "₹14,00,000 - ₹20,00,000",
@@ -1176,6 +1331,7 @@ const jobsData = [
         location: "Gurgaon, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Business Analyst",
         workType: "Onsite",
         salary: "₹9,00,000 - ₹14,00,000",
@@ -1184,6 +1340,7 @@ const jobsData = [
         location: "Kolkata, India", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Machine Learning Engineer",
         workType: "Remote",
         salary: "₹15,00,000 - ₹25,00,000",
@@ -1192,6 +1349,7 @@ const jobsData = [
         location: "Berlin, Germany", 
     },
     {
+        jobId: crypto.randomUUID(),
         jobRole: "Cybersecurity Analyst",
         workType: "Onsite",
         salary: "₹10,00,000 - ₹16,00,000",
@@ -1201,4 +1359,31 @@ const jobsData = [
     },
 ];
 
-export default jobsData;
+export function DataProvider({children}){
+
+
+    const [bookmarkedJobs, setBookmarkedJobs] = useState(() => {
+        return JSON.parse(localStorage.getItem('bookmarkedJobs')) || [];
+    });
+
+    const toggleBookmark = (job) => {
+        console.log("Toggling bookmark for job:", job);
+        const isBookmarked = bookmarkedJobs.some((item) => item.jobId === job.jobId);
+        console.log("Currently bookmarked?", isBookmarked);
+    
+        const updatedBookmarks = isBookmarked
+            ? bookmarkedJobs.filter((item) => item.jobId !== job.jobId)
+            : [...bookmarkedJobs, job];
+    
+        console.log("Updated bookmarks:", updatedBookmarks);
+        setBookmarkedJobs(updatedBookmarks);
+        localStorage.setItem('bookmarkedJobs', JSON.stringify(updatedBookmarks));
+    };
+    
+
+    return (
+        <JobData.Provider value={{ jobsData, bookmarkedJobs, toggleBookmark}}>
+            {children}
+        </JobData.Provider>
+    );
+}
